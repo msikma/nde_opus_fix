@@ -1,0 +1,36 @@
+{
+  "name": "@dada78641/nde_opus_fix",
+  "description": "Fixes .opus file rating tags for Winamp",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "readme.md"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msikma/nde_opus_fix.git"
+  },
+  "bin": {
+    "nde_opus_fix.js": "src/bin/nde_opus_fix.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.8.6"
+  },
+  "dependencies": {
+    "@dada78641/env-paths": "^0.1.0",
+    "argparse": "^2.0.1",
+    "command-exists": "^1.2.9",
+    "music-metadata": "^11.10.3",
+    "node-nde": "^1.2.0",
+    "tempy": "^3.1.0"
+  }
+}
