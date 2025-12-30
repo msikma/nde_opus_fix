@@ -26,7 +26,6 @@
     "@types/node": "^22.8.6"
   },
   "dependencies": {
-    "@dada78641/env-paths": "^0.1.0",
     "argparse": "^2.0.1",
     "command-exists": "^1.2.9",
     "music-metadata": "^11.10.3",

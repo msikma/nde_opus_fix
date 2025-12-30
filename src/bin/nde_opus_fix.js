@@ -10,7 +10,6 @@ import {parseFile} from 'music-metadata'
 import {temporaryFile} from 'tempy'
 import {fileExists, fileIsWritable} from '../lib/fs.js'
 import {canRunCommand, runCommand} from '../lib/exec.js'
-import {readConfig} from '../lib/config.js'
 import pkgData from '../../package.json' with {type: 'json'}
 
 /** We require at least 500 MB free disk space; otherwise the script will exit. */
