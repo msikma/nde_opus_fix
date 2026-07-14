@@ -205,8 +205,17 @@ async function main() {
   const config = getCliArguments()
   await checkPrerequisites()
 
-  const ndeReader = NDE.load(config.dat, config.idx)
-  const library = ndeReader.readAll()
+  let ndeReader, library
+  try {
+    ndeReader = NDE.load(config.dat, config.idx)
+    library = ndeReader.readAll()
+  }
+  catch (err) {
+    if (err.code === 'ENOENT') {
+      process.exit(1)
+    }
+    throw err
+  }
 
   // Get the rateable items; must be an Opus file, and must have a non-zero rating.
   const rateable = library.filter(item => (item.filename.endsWith('.opus') || item.filename.endsWith('.opu')) && item.rating > 0)
